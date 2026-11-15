@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>北京地铁之“挤门遁甲” · 用最离谱的方式挤进去</title>
+<meta name="description" content="四关沙雕物理小游戏：缩骨功、气流借力、道具流、西二旗早高峰。用最离谱的方式挤上北京地铁。" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <strong>北京地铁之“挤门遁甲”</strong>
+        <span>SQUEEZE SIMULATOR · 早高峰行为艺术</span>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button id="btnSound" class="chip" title="开关音效">♪ 音效 开</button>
+      <button id="btnHelp" class="chip" title="玩法说明">? 玩法</button>
+      <button id="btnHome" class="chip" title="返回首页">⌂ 选关</button>
+    </div>
+  </header>
+
+  <div class="hud" id="hud">
+    <div class="hud-left">
+      <div class="hud-level" id="hudLevel">关卡 01</div>
+      <div class="hud-title" id="hudTitle">缩骨功</div>
+    </div>
+    <div class="hud-mid">
+      <div class="meter-head"><span id="meterLabel">尊严值</span><b id="meterText">100%</b></div>
+      <div class="meter-track"><div class="meter-fill" id="meterFill"></div></div>
+      <div class="hud-tip" id="hudTip">按提示操作</div>
+    </div>
+    <div class="hud-right">
+      <div class="hud-timer" id="hudTimer">30.0</div>
+      <div class="hud-timer-label" id="hudTimerLabel">关门倒计时</div>
+    </div>
+  </div>
+
+  <div class="stage" id="stage">
+    <canvas id="game" width="960" height="600"></canvas>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <footer class="footer">
+    <span>操作：鼠标 / 触摸 · <b>A D</b> 或 <b>← →</b> 移动 · <b>空格</b> 蓄力 / 缩骨 · <b>R</b> 重来</span>
+    <span class="footer-right">纯属虚构 · 数字与播报均为游戏设定 · 无地域指向 · 献给每个早高峰通勤者</span>
+  </footer>
+</div>
+
+<script src="engine.js"></script>
+<script src="levels.js"></script>
+</body>
+</html>
